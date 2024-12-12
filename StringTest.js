@@ -1,11 +1,11 @@
 function stringGame (input){
-let stringToChange = input.shift()
+let stringToChange = input.shift();
 for(let i=0; i<input.length; i++){
     let command = input[i].split(` `);
     if (command[0]===`Change`){
-        let toReplace= command[1]
-        let replacer = command[2]
-        stringToChange=stringToChange.replaceAll(toReplace, replacer)
+        let toReplace= command[1]';
+        let replacer = command[2];
+        stringToChange=stringToChange.replaceAll(toReplace, replacer);
         console.log(stringToChange);
     }else if (command[0]===`Includes`){
         if(stringToChange.includes(command[1])){
@@ -30,9 +30,9 @@ for(let i=0; i<input.length; i++){
         console.log(idx);
     }else if(command[0]===`Cut`){
         let startIdx=Number(command[1]);
-        let endIdx=Number(command[2])
+        let endIdx=Number(command[2]);
         //let toPrint = stringToChange.substring(startIdx,(startIdx+endIdx));
-        let toPrint = stringToChange.substring(startIdx, (startIdx+endIdx))
+        let toPrint = stringToChange.substring(startIdx, (startIdx+endIdx));
         console.log(toPrint);
     }else if(command[0]===`Done`){
         break;
